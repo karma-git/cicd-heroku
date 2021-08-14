@@ -1,6 +1,7 @@
 """
 Simple FastAPI application, running on port 8080
 """
+import os
 from socket import gethostname
 from datetime import datetime
 from uuid import uuid4
@@ -23,4 +24,5 @@ async def liveness_probe():
     return {"status": "OK"}
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=80)
+    port = os.environ.get('PORT', 8080)
+    uvicorn.run(app, host="0.0.0.0", port=port)
