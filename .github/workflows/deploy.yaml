@@ -19,6 +19,7 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "karma-git-fastapi" #Must be unique in Heroku
           heroku_email: ${{secrets.HEROKU_EMAIL}}
+          usedocker: true
 #          healthcheck: "https://karma-git-fastapi.herokuapp.com/isalive"
 #          checkstring: "ok"
 #          delay: 5
