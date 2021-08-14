@@ -5,7 +5,7 @@ import os
 from socket import gethostname
 from datetime import datetime
 from uuid import uuid4
-from fastapi import FastAPI
+from fastapi import FastAPI, status
 import uvicorn
 
 app = FastAPI()

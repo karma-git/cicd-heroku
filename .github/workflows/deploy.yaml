@@ -19,6 +19,8 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "karma-git-fastapi"
           heroku_email: ${{secrets.HEROKU_EMAIL}}
+        run: |
+           heroku ps:scale -a karma-git-fastapi web=1
 #          heroku stack: set heroku-20
 #          healthcheck: "https://karma-git-fastapi.herokuapp.com/isalive"
 #          checkstring: "ok"
