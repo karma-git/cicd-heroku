@@ -22,7 +22,6 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         with:
-          context: app
-          file: ./Dockerfile
+          context: ./app
           push: false  # TODO - push to Registry on merge with trunk
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/k8s-gitlab-ci-cd:${{ github.run_id }}
