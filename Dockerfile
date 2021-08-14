@@ -13,7 +13,7 @@ RUN adduser -D fastapi && chown -R fastapi /app
 
 USER fastapi
 
-EXPOSE 8080
+EXPOSE 80
 
 ENTRYPOINT [""]
 CMD [ "python3", "main.py" ]
