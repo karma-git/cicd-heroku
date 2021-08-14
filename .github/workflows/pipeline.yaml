@@ -8,8 +8,8 @@ on:
       - master
   pull_request:
     branches:
-      - feat/*
-      - hotfix/*
+      - 'feat/*'
+      - 'hotfix/*'
 
 jobs:
   build:
