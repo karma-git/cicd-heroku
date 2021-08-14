@@ -52,8 +52,8 @@ jobs:
       - name: Smoke test
         run: |
           pwd
-          ls -la /app
-          python3 /app/main.py &
+          ls -R
+          python3 app/main.py &
           curl http://0.0.0.0/isalive | tee getresult
           cat getresult
           jq '.status' getresult | grep 'OK'
