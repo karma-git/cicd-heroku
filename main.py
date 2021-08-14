@@ -1,12 +1,10 @@
 """
 Simple FastAPI application, running on port 8080
 """
-import os
 from socket import gethostname
 from datetime import datetime
 from uuid import uuid4
 from fastapi import FastAPI, status
-import uvicorn
 
 app = FastAPI()
 
@@ -23,8 +21,3 @@ async def root():
 async def liveness_probe():
     """Smoke test ep"""
     return {"status": "OK"}
-
-
-# if __name__ == "__main__":
-#     port = os.environ.get('PORT', 8080)
-#     uvicorn.run(app, host="0.0.0.0", port=port)
