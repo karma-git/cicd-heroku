@@ -46,7 +46,6 @@ jobs:
       - name: Smoke Test
         # Port 80 busy or closed by ufw
         run: |
-          cd app
           uvicorn main:app --host 0.0.0.0 --port 8080 &
           sleep 3
           curl http://0.0.0.0:8080/isalive > getresult
