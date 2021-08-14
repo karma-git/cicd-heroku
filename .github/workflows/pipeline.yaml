@@ -1,16 +1,12 @@
-name: Pylint
+name: pylint
 
 on:
-  # Trigger the workflow on push or pull request,
-  # but only for the main branch
   push:
     branches:
       - master
   pull_request:
     branches:
       - master
-      - 'feat/*'
-      - 'hotfix/*'
 
 jobs:
   build:
@@ -30,4 +26,6 @@ jobs:
         cd app && pip install --no-cache-dir -r requirements.txt
     - name: Analysing the code with pylint
       run: |
+        ls -la
+        cd app
         pylint `ls -R|grep .py$|xargs`
