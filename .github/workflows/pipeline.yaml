@@ -78,5 +78,4 @@ jobs:
           heroku_app_name: "karma-git-fastapi"
           heroku_email: ${{secrets.HEROKU_EMAIL}}
           healthcheck: "https://karma-git-fastapi.herokuapp.com/isalive"
-          checkstring: "OK"
           delay: 5
