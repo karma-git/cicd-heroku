@@ -16,4 +16,4 @@ USER fastapi
 EXPOSE 8080
 
 ENTRYPOINT [""]
-CMD [ "python3", "main.py" ]
+CMD [ "uvicorn", "main:app", "--host", "0.0.0.0",  "--port", "8080" ]
