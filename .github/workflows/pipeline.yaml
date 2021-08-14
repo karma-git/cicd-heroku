@@ -51,11 +51,8 @@ jobs:
           sudo apt-get install -y curl jq
       - name: Smoke test
         run: |
-          pwd
-          ls -R
           python3 app/main.py &
           sleep 3
-          curl http://0.0.0.0:8080/isalive | tee getresult
-          cat getresult
+          curl http://0.0.0.0:8080/isalive > getresult
           jq '.status' getresult | grep 'OK'
 

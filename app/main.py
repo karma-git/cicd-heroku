@@ -1,5 +1,5 @@
 """
-Simple FastAPI application
+Simple FastAPI application, running on port 8080
 """
 from socket import gethostname
 from datetime import datetime
